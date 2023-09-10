@@ -18,7 +18,7 @@ public class Usuario extends ConfiguracionGeneral{
     private String nombre;
     private String password;
     private String rol;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "Usuario_id")
     private List<Pedido> pedidos = new ArrayList<>();

@@ -19,7 +19,7 @@ public class Cliente extends ConfiguracionGeneral{
     private String apellido;
     private String telefono;
     private String email;
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "cliente_id")
     private List<Pedido> pedidos = new ArrayList<>();

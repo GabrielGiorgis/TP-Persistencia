@@ -24,10 +24,10 @@ public class Pedido extends ConfiguracionGeneral{
     @Enumerated(EnumType.STRING)
     private TipoEnvio tipoenvio;
     private Double total;
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne( orphanRemoval = true)
     @JoinColumn(name = "pedido_id")
     private Factura factura;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany( orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "pedido_id")
     private List<DetallePedido> detallePedidos = new ArrayList<>();

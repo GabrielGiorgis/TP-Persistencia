@@ -18,7 +18,7 @@ public class Domicilio extends ConfiguracionGeneral{
     private String calle;
     private String numero;
     private String localidad;
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     private List<Pedido> pedidos = new ArrayList<>();
     @ManyToOne()

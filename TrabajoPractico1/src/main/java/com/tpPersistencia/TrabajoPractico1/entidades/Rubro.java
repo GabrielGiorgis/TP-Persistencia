@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 public class Rubro extends ConfiguracionGeneral{
     private String denominacion;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "Rubro_id")
     private List<Producto> productos = new ArrayList<>();
